@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<definitions xmlns:soap='http://schemas.xmlsoap.org/wsdl/soap/'
+    xmlns:xsd='http://www.w3.org/2001/XMLSchema'
+    xmlns='http://schemas.xmlsoap.org/wsdl/' 
+    xmlns:tns='http://example.emstar.dk/greeting' 
+    targetNamespace='http://example.emstar.dk/greeting'
+    name='GreetService'>
+    <types>
+        <xsd:schema>
+            <xsd:import namespace='http://example.emstar.dk/greeting'
+                schemaLocation='dk.emstar.example.greeting.xsd' />
+        </xsd:schema>
+    </types>
+    <message name='greet'>
+        <part name='request' element='tns:greet'></part>
+    </message>
+    <message name='greetResponse'>
+        <part name='response' element='tns:greetResponse'></part>
+    </message>
+    <portType name='GreetService'>
+        <operation name='greet'>
+            <input message='tns:greet'></input>
+            <output message='tns:greetResponse'></output>
+        </operation>
+    </portType>
+    <binding name='GreetServicePortBinding' type='tns:GreetService'>
+        <soap:binding transport='http://schemas.xmlsoap.org/soap/http'
+            style='document'></soap:binding>
+        <operation name='greet'>
+            <soap:operation soapAction=''></soap:operation>
+            <input>
+                <soap:body use='literal'></soap:body>
+            </input>
+            <output>
+                <soap:body use='literal'></soap:body>
+            </output>
+        </operation>
+    </binding>
+    <service name='GreetServiceService'>
+        <port name='GreetServicePort' binding='tns:GreetServicePortBinding'>
+            <soap:address location='http://localhost:808/'></soap:address>
+        </port>
+    </service>
+</definitions>
