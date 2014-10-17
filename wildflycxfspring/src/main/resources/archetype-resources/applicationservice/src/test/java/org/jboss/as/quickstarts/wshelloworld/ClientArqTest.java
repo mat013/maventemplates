@@ -20,6 +20,7 @@
 package org.jboss.as.quickstarts.wshelloworld;
 
 import org.jboss.arquillian.junit.Arquillian;
+import org.junit.Ignore;
 import org.junit.runner.RunWith;
 
 /**
@@ -28,6 +29,7 @@ import org.junit.runner.RunWith;
  * @author lnewson@redhat.com
  */
 @RunWith(Arquillian.class)
+@Ignore
 public class ClientArqTest {
 //    /**
 //     * The location of the WebApp source folder so we know where to find the web.xml when deploying using Arquillian.

@@ -2,6 +2,14 @@
 <archetype-descriptor xsi:schemaLocation="http://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.0.0 http://maven.apache.org/xsd/archetype-descriptor-1.0.0.xsd" name="springcxf"
     xmlns="http://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.0.0"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <fileSets>
+    <fileSet encoding="UTF-8">
+      <directory></directory>
+      <includes>
+        <include>go.bat</include>
+      </includes>
+    </fileSet>
+  </fileSets>
   <modules>
     <module id="interfaces" dir="interfaces" name="interfaces">
       <fileSets>
@@ -24,6 +32,12 @@
             <include>**/*.xsd</include>
           </includes>
         </fileSet>
+        <fileSet filtered="true" encoding="UTF-8">
+          <directory>src/test/resources</directory>
+          <includes>
+            <include>**/*.xml</include>
+          </includes>
+        </fileSet>
       </fileSets>
     </module>
     <module id="applicationservice" dir="applicationservice" name="applicationservice">
@@ -32,6 +46,17 @@
           <directory>src/main/java</directory>
           <includes>
             <include>**/*.java</include>
+          </includes>
+          <excludes>
+            <exclude>dk/emstar/time/CalendarService.java</exclude>
+            <exclude>dk/emstar/time/CalendarServiceImpl.java</exclude>
+          </excludes>
+        </fileSet>
+        <fileSet filtered="true" encoding="UTF-8">
+          <directory>src/main/java</directory>
+          <includes>
+            <include>dk/emstar/time/CalendarService.java</include>
+            <include>dk/emstar/time/CalendarServiceImpl.java</include>
           </includes>
         </fileSet>
         <fileSet filtered="true" encoding="UTF-8">

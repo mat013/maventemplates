@@ -8,7 +8,7 @@ import org.junit.Test;
 import org.springframework.beans.factory.support.GenericBeanDefinition;
 import org.springframework.context.support.StaticApplicationContext;
 
-import ${package}.${parentArtifactId}.GreetingServiceImpl;
+import ${package}.${parentArtifactId}.GreetingServiceBean;
 
 public class HelloWorldImplTest {
 

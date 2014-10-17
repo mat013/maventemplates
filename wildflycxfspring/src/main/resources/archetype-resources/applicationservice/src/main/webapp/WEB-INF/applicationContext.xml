@@ -18,9 +18,9 @@
     <aop:aspectj-autoproxy />
     <bean id="loggingWebServiceSystemBoundaryAspect" class="${package}.${parentArtifactId}.aspect.LoggingWebServiceSystemBoundaryAspect"/>
 
-    <bean id="calendarService" class="${package}.${parentArtifactId}.dependency.CalendarServiceImpl"/>
+    <bean id="calendarService" class="dk.emstar.time.CalendarServiceImpl"/>
 
     <jaxws:endpoint id="helloWorld" 
-    	implementor="${package}.${parentArtifactId}.GreetingServiceImpl" 
+    	implementor="${package}.${parentArtifactId}.GreetingServiceBean" 
     	address="/Greeting" />
 </beans>
