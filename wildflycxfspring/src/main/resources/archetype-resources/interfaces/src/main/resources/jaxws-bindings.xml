@@ -1,9 +1,0 @@
-#set( $symbol_pound = '#' )
-#set( $symbol_dollar = '$' )
-#set( $symbol_escape = '\' )
-<jaxws:bindings xmlns:jaxws="http://java.sun.com/xml/ns/jaxws"
-    xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:jxb="http://java.sun.com/xml/ns/jaxb"
-    xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:annox="http://annox.dev.java.net">
-    <!-- <jaxws:enableAsyncMapping>true</jaxws:enableAsyncMapping> -->
-    <jaxws:enableWrapperStyle>false</jaxws:enableWrapperStyle>
-</jaxws:bindings>
