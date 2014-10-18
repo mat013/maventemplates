@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!-- Published by JAX-WS RI at http://jax-ws.dev.java.net. RI's version is JAX-WS RI 2.1.6 in JDK 6. -->
+<xs:schema xmlns:xs='http://www.w3.org/2001/XMLSchema' version='1.0' xmlns:tns='http://example.emstar.dk/greeting' targetNamespace='http://example.emstar.dk/greeting'>
+
+    <xs:element name='greet' type='tns:greet' />
+    <xs:element name='greetResponse' type='tns:greetResponse' />
+    <xs:element name='sendMessage' type='tns:sendMessage' />
+    <xs:element name='sendMessageResponse' type='tns:sendMessageResponse' />
+
+    <xs:complexType name='greet'>
+        <xs:sequence>
+            <xs:element name='navn' type="xs:string" minOccurs='0' />
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name='greetResponse'>
+        <xs:sequence>
+            <xs:element name='text' type='xs:string' minOccurs='0' />
+            <xs:element name='dateTime' type="xs:dateTime" minOccurs='0' />
+            <xs:element name='date' type="xs:date" minOccurs='0' />
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="sendMessage">
+        <xs:sequence>
+            <xs:element name="in" type="xs:string" />
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="sendMessageResponse">
+        <xs:sequence>
+            <xs:element name="out" type="xs:string" />
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>
