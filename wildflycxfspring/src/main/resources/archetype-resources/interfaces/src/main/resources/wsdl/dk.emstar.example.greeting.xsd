@@ -1,0 +1,70 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!-- Published by JAX-WS RI at http://jax-ws.dev.java.net. RI's version is JAX-WS RI 2.1.6 in JDK 6. -->
+<xs:schema xmlns:xs='http://www.w3.org/2001/XMLSchema' version='1.0' xmlns:tns='http://example.emstar.dk/greeting' targetNamespace='http://example.emstar.dk/greeting'>
+
+    <xs:element name='greet' type='tns:greet' />
+    <xs:element name='greetResponse' type='tns:greetResponse' />
+    <xs:element name='sendMessageUsingInterface' type='tns:sendMessageUsingInterface' />
+    <xs:element name='sendMessageUsingInterfaceResponse' type='tns:sendMessageUsingInterfaceResponse' />
+    <xs:element name='sendMessageUsingAdapter' type='tns:sendMessageUsingAdapter' />
+    <xs:element name='sendMessageUsingAdapterResponse' type='tns:sendMessageUsingAdapterResponse' />
+    <xs:element name='createUser' type='tns:createUser' />
+    <xs:element name='createUserResponse' type='tns:createUserResponse' />
+    <xs:element name='createUserBMT' type='tns:createUserBMT' />
+    <xs:element name='createUserBMTResponse' type='tns:createUserBMTResponse' />
+    <xs:element name='createUserCrud' type='tns:createUserCrud' />
+    <xs:element name='createUserCrudResponse' type='tns:createUserCrudResponse' />
+    <xs:element name='readUser' type='tns:readUser' />
+    <xs:element name='readUserResponse' type='tns:readUserResponse'/>
+
+    <xs:complexType name='greet'>
+        <xs:sequence>
+            <xs:element name='navn' type='xs:string' minOccurs='0' />
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name='greetResponse'>
+        <xs:sequence>
+            <xs:element name='text' type='xs:string' minOccurs='0' />
+            <xs:element name='dateTime' type='xs:dateTime' minOccurs='0' />
+            <xs:element name='date' type='xs:date' minOccurs='0' />
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name='sendMessageUsingInterface'>
+        <xs:sequence>
+            <xs:element name='message' type='xs:string' />
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name='sendMessageUsingInterfaceResponse' />
+
+    <xs:complexType name='sendMessageUsingAdapter'>
+        <xs:sequence>
+            <xs:element name='message' type='xs:string'></xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name='sendMessageUsingAdapterResponse' />
+
+    <xs:complexType name='createUser'>
+        <xs:sequence>
+            <xs:element name='username' type='xs:string'></xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name='createUserResponse' />
+    <xs:complexType name='createUserBMT'>
+        <xs:sequence>
+            <xs:element name='username' type='xs:string'></xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name='createUserBMTResponse' />
+    <xs:complexType name='createUserCrud'>
+        <xs:sequence>
+            <xs:element name='username' type='xs:string'></xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name='createUserCrudResponse' />
+
+    <xs:complexType name='readUser' />
+    <xs:complexType name='readUserResponse' />
+
+</xs:schema>
