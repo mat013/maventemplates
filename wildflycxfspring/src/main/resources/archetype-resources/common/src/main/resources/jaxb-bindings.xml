@@ -1,0 +1,18 @@
+#set( $symbol_pound = '#' )
+#set( $symbol_dollar = '$' )
+#set( $symbol_escape = '\' )
+<jxb:bindings xmlns:jaxws="http://java.sun.com/xml/ns/jaxws"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+	xmlns:jxb="http://java.sun.com/xml/ns/jaxb"
+    xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" 
+	xmlns:annox="http://annox.dev.java.net"
+	jxb:extensionBindingPrefixes="xjc" 
+	xmlns:xjc="http://java.sun.com/xml/ns/jaxb/xjc"
+	jxb:version="2.1">
+    <jxb:bindings>
+        <jxb:globalBindings>
+            <xjc:javaType adapter="dk.emstar.${artifactId}.jaxb.adapters.LocalDateTimeAdapter" name="java.time.LocalDateTime" xmlType="xs:dateTime" />
+            <xjc:javaType adapter="dk.emstar.${artifactId}.jaxb.adapters.LocalDateAdapter" name="java.time.LocalDate" xmlType="xs:date" />
+        </jxb:globalBindings>
+    </jxb:bindings>
+</jxb:bindings>
